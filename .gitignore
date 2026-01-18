@@ -1,0 +1,25 @@
+# Binaries
+kqlfile
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go build artifacts
+*.test
+*.out
+
+# Go workspace
+/go.work
+/go.work.sum
+
+# Local env
+.env
+
+# IDEs
+.idea/
+.vscode/
+
+# OS
+.DS_Store

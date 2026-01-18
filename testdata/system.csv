@@ -1,0 +1,6 @@
+service,host,status,latency_ms
+api,host-a,ok,12
+api,host-b,ok,20
+api,host-c,error,0
+worker,host-a,ok,35
+worker,host-b,error,0
