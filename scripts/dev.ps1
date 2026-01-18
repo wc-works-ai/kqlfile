@@ -1,5 +1,5 @@
 param(
-  [ValidateSet("build","test","fmt","vet","lint","clean","run-sample")]
+  [ValidateSet("build","test","fmt","vet","lint","clean","run-sample","bench")]
   [string]$Task = "build"
 )
 
@@ -17,5 +17,8 @@ switch ($Task) {
   }
   "run-sample" {
     go run "./cmd/$App" --input testdata/people.csv --query "T | where age > 30 | project name, age"
+  }
+  "bench" {
+    powershell -ExecutionPolicy Bypass -File scripts/bench.ps1
   }
 }
