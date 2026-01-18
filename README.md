@@ -46,7 +46,7 @@ bob,finance
 ## Multiple Inputs
 Use named inputs and reference the table name in the query:
 ```
-./kqlfile --input A=testdata/people.csv --input B=testdata/orders_big.csv --query "A | join kind=inner (B) on id == user_id | project name, amount | take 5" --type csv
+./kqlfile --input A=testdata/people_big.csv --input B=testdata/orders_big.csv --query "A | join kind=inner (B) on id == user_id | project name, amount | take 5" --type csv
 ```
 
 ## Developer Commands
