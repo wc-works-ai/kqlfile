@@ -74,3 +74,6 @@ MIT
 
 ## Development Note
 This project was built with the assistance of OpenAI Codex.
+
+## Releases
+Releases are automated via semantic-release on pushes to `master` using Conventional Commits.
