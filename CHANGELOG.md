@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/wc-works-ai/kqlfile/compare/v0.1.0...v0.2.0) (2026-01-19)
+
+
+### Features
+
+* add json input support ([1b1a35a](https://github.com/wc-works-ai/kqlfile/commit/1b1a35adb0c120c3c45d1a4c976f82ada6e24cbd))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
