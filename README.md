@@ -11,8 +11,8 @@ A fast, streaming Go CLI that runs a small KQL subset over large flat files. It 
 ## Features
 - Streaming execution for filters and projections
 - KQL subset: where, project, extend, summarize (count), take, order by, join (inner)
+- Input formats: CSV and JSON Lines (NDJSON)
 - Output formats: csv, json, table
-- Designed for multi-format inputs (currently CSV only)
 
 ## Install
 ```
@@ -41,6 +41,11 @@ Example result:
 name,dept_name
 alice,engineering
 bob,finance
+```
+
+## JSON Lines Example
+```
+./kqlfile --input testdata/sample.jsonl --query "T | where active == true | project name, age" --type json
 ```
 
 ## Multiple Inputs

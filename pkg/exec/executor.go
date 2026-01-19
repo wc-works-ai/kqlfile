@@ -15,8 +15,12 @@ type Operator interface {
 	Next() (*csvio.Row, error)
 }
 
+type RowReader interface {
+	Next() (*csvio.Row, error)
+}
+
 type SourceOp struct {
-	Reader *csvio.Reader
+	Reader RowReader
 }
 
 func (s SourceOp) Next() (*csvio.Row, error) {
@@ -201,7 +205,7 @@ func (s *SummarizeOp) Next() (*csvio.Row, error) {
 	return row, nil
 }
 
-func BuildPipeline(reader *csvio.Reader, ops []plan.Operator) (Operator, error) {
+func BuildPipeline(reader RowReader, ops []plan.Operator) (Operator, error) {
 	var current Operator = SourceOp{Reader: reader}
 	for _, op := range ops {
 		switch o := op.(type) {

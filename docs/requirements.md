@@ -14,7 +14,7 @@ Build an open-source Go CLI that executes a subset of Kusto Query Language (KQL)
 - GUI or web service
 
 ## Functional Requirements
-- Read one or more CSV files from disk.
+- Read one or more input files from disk (CSV and JSON Lines).
 - Infer schema or accept explicit schema definitions.
 - Support typed columns: string, int, float, bool, datetime.
 - Parse a KQL subset (see operator list below).
